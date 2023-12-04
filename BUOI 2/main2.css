@@ -1,0 +1,10 @@
+a:link {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
