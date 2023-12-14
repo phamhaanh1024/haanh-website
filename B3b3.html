@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Desgin</title>
+    <link rel="stylesheet" href="./buoi3/3.bai1.css" />
+    <script src="https://kit.fontawesome.com/533aad8d01.js" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/41cdafd19e156a1f74759f9c88b878ff?family=Google+Sans+Text+Regular" rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Google Sans", sans-serif;
+    }
+    
+    .container {
+        width: 100%;
+        /* height: 10000px; */
+        display: flex;
+    }
+    
+    .left {
+        width: 9%;
+        /* position: relative; */
+        background-color: #f3f6fc;
+        /* border-right: 1px solid gray; */
+        /* overflow: scroll; */
+        z-index: 10;
+    }
+    
+    .left-container {
+        position: sticky;
+        height: auto;
+    }
+    
+    li {
+        list-style-type: none;
+        padding: 10px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .right {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .inner-container {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .inner-wrap {
+        margin-bottom: 70px;
+    }
+    
+    .inner-head {
+        width: 100%;
+        height: 382px;
+        background-image: url(unnamed.jpg);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 25px;
+    }
+    
+    .inner-head h1 {
+        font-weight: 300;
+        font-size: 112px;
+    }
+    
+    .inner-head .desc {
+        width: 820px;
+        height: 60px;
+    }
+    
+    .inner-head p {
+        text-align: center;
+        font-weight: 300;
+        font-size: 22px;
+        color: #1f1f1f;
+    }
+    
+    .inner-head button {
+        border: none;
+        background-color: #0d57d0;
+        width: 216px;
+        height: 75px;
+        border-radius: 60px;
+        margin-top: 20px;
+    }
+    
+    .inner-head button:hover {
+        background-color: #3673d5;
+        cursor: pointer;
+    }
+    
+    .inner-head a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .inner-main {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 60px;
+    }
+    
+    .inner-footer {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+    }
+    
+    .inner-main .inner-list {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .inner-main .inner-item {
+        width: 33.33%;
+        border-radius: 10px;
+    }
+    
+    .inner-main .inner-item img {
+        height: 200px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .inner-main h2 {
+        font-size: 50px;
+        font-weight: 400;
+        margin-left: 20px;
+    }
+    
+    .inner-main .inner-item .desc {
+        padding: 0 17px;
+        padding-bottom: 20px;
+    }
+    
+    .inner-main .inner-item .desc h3 {
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    
+    .inner-main .inner-item .desc p {
+        /* margin-top: 10px; */
+        font-size: 18px;
+    }
+    
+    .inner-main .inner-item:hover {
+        background-color: #a3e2f9;
+        cursor: pointer;
+    }
+    
+    .inner-main .inner-item-2 {
+        width: 100%;
+        padding: 20px;
+        background-color: #e2e6ec;
+    }
+    
+    .inner-main .inner-item-2 h3 {
+        font-weight: 500;
+    }
+    
+    .inner-main .inner-item-2 p {
+        margin-top: 15px;
+    }
+    
+    .inner-footer {
+        margin-top: 140px;
+    }
+    
+    .inner-footer .inner-list {
+        display: flex;
+        gap: 35px;
+    }
+    
+    .inner-footer .inner-list .inner-item:first-child {
+        width: 44%;
+    }
+    
+    .inner-footer .inner-list .inner-item {
+        margin-right: 25px;
+    }
+    
+    .inner-footer .inner-list .inner-item i {
+        font-size: 25px;
+        margin-bottom: 15px;
+        position: relative;
+        /* z-index: -1; */
+        cursor: pointer;
+    }
+    
+    .inner-footer .inner-list .inner-item i::after {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 3px;
+        bottom: -7px;
+        left: 0;
+        background-color: black;
+        opacity: 0;
+    }
+    
+    .inner-footer .inner-list .inner-item i:hover:after {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .end {
+        display: flex;
+        gap: 20px;
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    
+    .end ul {
+        display: flex;
+        gap: 25px;
+    }
+    
+    .end a {
+        color: black;
+    }
+    
+    .end-text:hover {
+        text-decoration: underline;
+    }
+    
+    .end-text-1:hover {
+        text-decoration: underline;
+        color: #011c45;
+    }
+    
+    .box-icon {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 23px;
+        font-size: 13px;
+        align-items: center;
+        /* position: relative; */
+    }
+    
+    .box-icon i {
+        font-size: 20px;
+        background-color: inherit;
+        width: 60px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        color: #383838;
+        transition: ease 0.5s;
+    }
+    
+    .box-icon .active {
+        background-color: #90aedd;
+    }
+    
+    .box-icon .active:hover {
+        background-color: #90aedd;
+    }
+    /* .box-icon i:hover {
+            background-color: rgb(183, 183, 183);
+            color: #1f1f1f;
+            transform: scale(1.1);
+            cursor: pointer;
+        } */
+    
+    .icon-2:hover {
+        background-color: rgb(183, 183, 183);
+        color: #1f1f1f;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    .box-icon span {
+        margin-top: 5px;
+    }
+    
+    .left-container {
+        padding: 15px;
+        position: relative;
+        position: fixed;
+    }
+    
+    .box-icon-develop {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        background-color: #f3f6fc;
+        z-index: 100;
+        height: 100%;
+        border-radius: 0 8px 8px 0;
+        width: 0px;
+        overflow: hidden;
+        /* opacity: 0; */
+        transition: all 0.2s;
+        /* width: 150px; */
+        display: inline-block;
+        /* z-index: 1; */
+    }
+    
+    .box-icon-develop-1 {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        background-color: #f3f6fc;
+        z-index: 100;
+        height: 100%;
+        border-radius: 0 8px 8px 0;
+        width: 0px;
+        overflow: hidden;
+        /* opacity: 0; */
+        transition: all 0.2s;
+        /* width: 150px; */
+        display: inline-block;
+        overflow: scroll;
+        z-index: 1;
+    }
+    
+    .develop-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .box-icon-dv:hover .box-icon-develop {
+        width: 220px;
+        display: inline-block;
+        border-left: 1px solid rgb(209, 209, 209);
+        border-right: 1px solid rgb(209, 209, 209);
+    }
+    
+    .box-icon-dv:hover .box-icon-develop-1 {
+        width: 220px;
+        display: inline-block;
+        border-left: 1px solid rgb(209, 209, 209);
+        border-right: 1px solid rgb(209, 209, 209);
+    }
+    
+    .box-icon-1 {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid #1f1f1f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -1px;
+        margin-left: 12px;
+        cursor: pointer;
+    }
+    
+    .list-dv {
+        width: 200px;
+        height: 45px;
+        font-size: 16px;
+        border-radius: 60px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .list-dv:hover {
+        background-color: #e2e6ec;
+    }
+    
+    .text {
+        color: #383838;
+    }
+    
+    .list-dv-1 {
+        width: 200px;
+        height: 45px;
+        font-size: 16px;
+        border-radius: 60px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .list-dv-1:hover {
+        background-color: #e2e6ec;
+    }
+    
+    .box-icon-1:hover {
+        background-color: #e2e6ec;
+        color: #1f1f1f;
+    }
+    
+    .box-icon-1 i {
+        font-size: 24px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="left-container">
+                <div class="box-icon">
+                    <i class="fa-solid fa-house active"></i>
+                    <span>Home</span>
+                </div>
+
+                <div class="box-icon">
+                    <i class="icon-2 fa-solid fa-list-ul"></i>
+                    <span>Get started</span>
+                </div>
+                <div class="box-icon box-icon-dv">
+                    <i class="icon-2 fa-solid fa-arrows-left-right"></i><span>Develop</span>
+                    <div class="box-icon-develop">
+                        <ul class="develop-box">
+                            <li class="list-dv">
+                                <a class="text" href="#!">Develop overview</a>
+                            </li>
+                            <li class="list-dv-1">
+                                <a class="text" href="#!">Android</a>
+                                <i class="icon1 fa-solid fa-caret-down"></i>
+                            </li>
+                            <li class="list-dv">
+                                <a class="text" href="#!">Flutter</a>
+                            </li>
+                            <li class="list-dv">
+                                <a class="text" href="#!">Web</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-icon box-icon-dv">
+                    <i class="icon-2 fa-solid fa-envelope-open-text"></i
+                        ><span> Foundations</span>
+                        <div class="box-icon-develop">
+                            <ul class="develop-box">
+                                <li class="list-dv">
+                                    <a class="text" href="#!">Foundations overview </a>
+                                </li>
+                                <li class="list-dv">
+                                    <a class="text" href="#!">Accessibility </a>    
+                                </li>
+                                <li class="list-dv-1">
+                                    <a class="text" href="#!">Content design </a>
+                                    <i class="icon1 fa-solid fa-caret-down"></i>
+                    </li>
+                    <li class="list-dv">
+                        <a class="text" href="#!">Customizing Material </a>
+                    </li>
+                    <li class="list-dv">
+                        <a class="text" href="#!">Design tokens </a>
+                    </li>
+                    <li class="list-dv-1">
+                        <a class="text" href="#!">Interaction </a>
+                        <i class="icon1 fa-solid fa-caret-down"></i>
+                    </li>
+                    <li class="list-dv-1">
+                        <a class="text" href="#!">Layout </a>
+                        <i class="icon1 fa-solid fa-caret-down"></i>
+                    </li>
+                    <li class="list-dv">
+                        <a class="text" href="#!">Material A-Z </a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-icon box-icon-dv">
+                <i class="icon-2 fa-solid fa-palette"></i>
+                <span> Styles</span>
+                <div class="box-icon-develop">
+                    <ul class="develop-box">
+                        <li class="list-dv">
+                            <a class="text" href="#!">Styles overview </a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">Color</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Elevation </a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Icons</a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">Motion</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Shape</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Typography</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-icon box-icon-dv">
+                <i class="icon-2 fa-solid fa-circle-plus"></i>
+                <span> Components</span>
+                <div class="box-icon-develop-1">
+                    <ul class="develop-box">
+                        <li class="list-dv">
+                            <a class="text" href="#!">Components overview</a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">App bars</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Badges</a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">Buttons</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Cards</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Carousel</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Checkbox</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Chips</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Date pickers</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Dialogs</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Divider</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Lists</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Menus</a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">Navigation</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Progress indicators</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Radio button</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Search</a>
+                        </li>
+                        <li class="list-dv-1">
+                            <a class="text" href="#!">Sheets</a>
+                            <i class="icon1 fa-solid fa-caret-down"></i>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Sliders</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Snackbar</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Switch</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Tabs</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Text fileds</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Time pickers</a>
+                        </li>
+                        <li class="list-dv">
+                            <a class="text" href="#!">Tooltips</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box-icon">
+                <i class="icon-2 fa-brands fa-blogger"></i>
+                <span> Blogs</span>
+            </div>
+            <div class="box-icon-1">
+                <i class="fa-regular fa-moon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="inner-container">
+            <div class="inner-head">
+                <h1>Material Design</h1>
+                <div class="desc">
+                    <p>
+                        Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.
+                    </p>
+                </div>
+                <button><a href="#!">Get started</a></button>
+            </div>
+            <div class="inner-main">
+                <div class="inner-wrap">
+                    <h2>News & launches</h2>
+                    <div class="inner-list">
+                        <div class="inner-item">
+                            <img src="unnamed2.png" alt="" />
+                            <div class="desc">
+                                <h3>Figma design kit</h3>
+                                <p>
+                                    Jumpstart your M3 designs with the complete library of ready-made components
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed3.png" alt="" />
+                            <div class="desc">
+                                <h3>Large screen guidance</h3>
+                                <p>
+                                    Get started adapting your layouts for a range of window size classes and hardware
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed4.png" alt="" />
+                            <div class="desc">
+                                <h3>Material Design at Google I/O</h3>
+                                <p>
+                                    See the full list of Material talks and tutorials launching at I/o 2023
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-wrap">
+                    <h2>Design system updates</h2>
+                    <div class="inner-list">
+                        <div class="inner-item">
+                            <img src="unnamed5.png" alt="" />
+                            <div class="desc">
+                                <h3>M3 for Jetpack Compose</h3>
+                                <p>
+                                    With the latest stable release, use Jetpack Compose to build a complete M3 Android app
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed6.png" alt="" />
+                            <div class="desc">
+                                <h3>New component: M3 carousel</h3>
+                                <p>
+                                    An expressive new component for displaying scrollable collections of content
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed7.png" alt="" />
+                            <div class="desc">
+                                <h3>Back navigation & gestures</h3>
+                                <p>
+                                    Explore new motion and gesture capabilities for smooth navigation across screens
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-list">
+                        <div class="inner-item">
+                            <img src="unnamed8.png" alt="" />
+                            <div class="desc">
+                                <h3>Motion system updates</h3>
+                                <p>Get started applying motion, from ready-to-use transition patterns to updated guidance
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed9.png" alt="" />
+                            <div class="desc">
+                                <h3>Material Theme Builder</h3>
+                                <p>
+                                    Easily migrate or get started with the M3 color system and dynamic color
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inner-item">
+                            <img src="unnamed10.png" alt="" />
+                            <div class="desc">
+                                <h3>New color guidance for tones</h3>
+                                <p>
+                                    Updates include tone-based surface colors, contrast modes, and fixed accent colors
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-wrap">
+                    <h2>Resources</h2>
+                    <div class="inner-list">
+                        <div class="inner-item inner-item-2">
+                            <h3>Material blog</h3>
+                            <p>
+                                News,tutorials,and inspiration from the Material team
+                            </p>
+                        </div>
+                        <div class="inner-item inner-item-2">
+                            <h3>Figma design kit</h3>
+                            <p>
+                                Customizable styles and components to help you design with Material 3
+                            </p>
+                        </div>
+                    </div>
+                    <div class="inner-list">
+                        <div class="inner-item inner-item-2">
+                            <h3>Get started</h3>
+                            <p>
+                                Guides,videos,and tools to start building with Material
+                            </p>
+                        </div>
+                        <div class="inner-item inner-item-2">
+                            <h3>Develop</h3>
+                            <p>
+                                Code and developer documentation for Android,Flutter,and the Web
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-footer">
+                <div class="inner-wrap">
+                    <div class="inner-list">
+                        <div class="inner-item">
+                            <i class="fa-solid fa-house-laptop"></i>
+                            <p>
+                                Material Design is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material Design streamlines collaboration between designers and developers, and helps teams
+                                quickly build beautiful products.
+                            </p>
+                        </div>
+                        <div class="inner-item">
+                            <ul>
+                                <li>Social</li>
+                                <li>
+                                    <a class="end-text-1" href="#!">GitHub</a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Twitter</a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">YouTube</a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Blog RSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-item">
+                            <ul>
+                                <li>Libraries</li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Android</a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Compose </a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Flutter</a>
+                                </li>
+                                <li>
+                                    <a class="end-text-1" href="#!">Web</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-item">
+                            <li>Archived versions</li>
+                            <li>
+                                <a class="end-text-1" href="#!">Material Design 1</a>
+                            </li>
+                            <li>
+                                <a class="end-text-1" href="#!">Material Design 2 </a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="end">
+                        <h3>Google</h3>
+                        <ul>
+                            <li class="end-text">
+                                <a href="#!">Privacy Policy</a>
+                            </li>
+                            <li class="end-text">
+                                <a href="#!">Terms of Service</a>
+                            </li>
+                            <li class="end-text">
+                                <a href="#!">Join research studies</a>
+                            </li>
+                            <li class="end-text">
+                                <a href="#!">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
