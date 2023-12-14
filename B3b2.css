@@ -2,6 +2,10 @@ body {
     font-family: AvenirNextCondensed-Medium, sans-serif;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 @font-face {
     font-family: "Avenir Next Condensed Medium";
     src: url("164fce79eadeff648f8b1e539b2975db.eot");
@@ -443,7 +447,8 @@ button {
     outline: none;
     background-color: #e95100;
     padding: 10px 20px;
-    font-size: 12px;
+    margin: 10px;
+    font-size: 15px;
     font-weight: 700;
     color: #fff;
     border-radius: 5px;

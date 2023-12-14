@@ -96,12 +96,13 @@ a:visited {
     display: block;
 }
 
-button {
+.but-ton {
     border: none;
     outline: none;
     background-color: #e95100;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 15px;
+    margin: 10px;
     font-weight: 700;
     color: #fff;
     border-radius: 5px;
@@ -109,7 +110,7 @@ button {
     box-shadow: 0px 5px 0px 0px #f6ea3a;
 }
 
-button:active {
+but-ton:active {
     transform: translateY(5px);
     box-shadow: 0px 0px 0px 0px #a29bfe;
 }
