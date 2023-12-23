@@ -329,7 +329,6 @@ h2 {
     width: 500px;
     height: 778px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     gap: 50px;
@@ -623,7 +622,7 @@ a {
     border: none;
     cursor: pointer;
     background-color: #00bec9;
-    height: 52px;
+    height: 54px;
     width: 90px;
     display: flex;
     justify-content: center;
