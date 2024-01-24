@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -17,22 +18,37 @@ ul {
 /* navbar */
 
 .navbar {
-    position: absolute;
+    position: fixed!important;
     top: 0;
     left: 0;
+    z-index: 100;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    color: aliceblue;
+    padding: 15px;
+    color: rgb(28, 21, 18);
+    background: rgba(255, 255, 255, 0.338);
+    backdrop-filter: blur(10px);
 }
 
 .navbar a {
-    color: aliceblue;
+    color: rgb(28, 21, 18);
+    font-size: 1.1rem;
 }
 
 .navbar .logo {
     margin-left: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar .logo span {
+    color: rgb(182, 8, 95);
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
 }
 
 .nav-links {
@@ -58,12 +74,22 @@ header {
     justify-content: center;
 }
 
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .header-content {
     color: aliceblue;
-    margin-top: 100px;
+    margin-top: 150px;
     text-align: center;
-    /* background-color: rgba(211, 123, 174, 0.5);
-    border-radius: 20px; */
+    transform: translateY(0);
+    animation: slideDown 1s ease-in-out;
+    /* Áp dụng animation trong 1 giây với hiệu ứng ease-in-out */
 }
 
 .header-content h2 {
@@ -166,10 +192,25 @@ section {
     padding: 3px 10px;
 }
 
+.black-footer {
+    background-color: rgb(31, 28, 28);
+    color: pink;
+    padding: 100px;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.pink-text {
+    margin: 0;
+}
+
 
 /* Mobile device */
 
-@media only screen and (max-width:850px) {
+
+/* @media only screen and (max-width:850px) {
     .navbar {
         padding: 0;
     }
@@ -195,4 +236,4 @@ section {
     .navbar i {
         display: none;
     }
-}
+} */

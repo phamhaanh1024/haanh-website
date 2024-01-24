@@ -13,15 +13,15 @@
 
 <body>
     <nav class="navbar">
-        <h1 class="logo">PHA</h1>
+        <h1 class="logo"> PH<span>a.</span> </h1>
         <ul class="nav-links">
-            <li><a href="#">Contact</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Explore</a></li>
             <li><a href="#">Profile</a></li>
-            <li class="ctn"><a href="index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
-        <i class="fa-solid fa-bars" style="color: #b6085f;"></i>
+        <!-- <i class="fa-solid fa-bars" style="color: #b6085f;"></i> -->
     </nav>
 
     <header>
@@ -29,9 +29,27 @@
             <h2>Pham Ha Anh 222001416</h2>
             <div class="line"></div>
             <h1>WELCOME TO MY WEBSITE</h1>
-            <a href="page.html" class="ctn">Porfolio</a>
+            <!-- <a href="page.html" class="ctn">Porfolio</a> -->
         </div>
     </header>
+    <section class="about" id="about">
+        <div class="about-circle"></div>
+
+        <div class="about-img">
+            <img src="./img/img-abt.jpg" alt="aboutme">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>
+                <span>Web Designer</span>
+            </h3>
+            <p> Tôi đến từ Hà Nội và là một người trẻ đang tìm kiếm ý nghĩa và trải nghiệm trong cuộc sống.
+            </p>
+            <p> Tính cách của tôi có thể mô tả là vui tươi, tỏa sáng. Tôi luôn muốn thách thức bản thân để đạt được mục tiêu và ước mơ của mình. Tôi tin rằng sự học hỏi không ngừng là chìa khóa cho sự phát triển cá nhân và sự thành công trong tương lai.
+            </p>
+        </div>
+    </section>
 
     <section>
         <div class="title">
@@ -123,6 +141,10 @@
             </div>
         </div>
     </section>
+
+    <footer class="black-footer">
+        <p class="pink-text">Môn thiết kế website lớp N3</p>
+    </footer>
 </body>
 
 
@@ -146,22 +168,45 @@
     /* navbar */
     
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 20px;
-        color: aliceblue;
+        padding: 15px;
+        color: rgb(28, 21, 18);
+        background: rgb(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
     }
     
     .navbar a {
-        color: aliceblue;
+        color: rgb(28, 21, 18);
+        font-style: bold;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    
+    .navbar a:hover {}
+    
+    .navbar a.active {
+        color: #b6085f;
+        border-bottom: 3px solid #b6085f;
     }
     
     .navbar .logo {
         margin-left: 50px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    span {
+        color: #b6085f;
+    }
+    
+    .navbar .logo:hover {
+        transform: scale(1.1);
     }
     
     .nav-links {
@@ -187,10 +232,8 @@
     
     .header-content {
         color: aliceblue;
-        margin-top: 100px;
+        margin-top: 130px;
         text-align: center;
-        /* background-color: rgba(211, 123, 174, 0.5);
-    border-radius: 20px; */
     }
     
     .header-content h2 {
@@ -226,6 +269,58 @@
         cursor: pointer;
     }
     /* Events */
+    /* About */
+    
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+    }
+    
+    .about-circle {
+        position: absolute;
+        left: -150px;
+        margin-top: 15rem;
+        height: 30vw;
+        width: 30vw;
+        border-radius: 50%;
+        background-color: #b6085f;
+    }
+    
+    .about-img {
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        border: 20px solid #b6085f;
+    }
+    
+    .about-img img {
+        position: relative;
+        width: 30vw;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    .about-content h2 {
+        text-align: left;
+        line-height: 1;
+    }
+    
+    .about-content h3 {
+        font-size: 2.6rem;
+    }
+    
+    .about-content p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    /* End About */
     
     section {
         width: 80%;
@@ -291,10 +386,11 @@
         padding: 3px 10px;
     }
     /* Mobile device */
-    
+    /*     
     @media only screen and (max-width:850px) {
         .navbar {
             padding: 0;
+            position: relative;
         }
         .logo {
             position: absolute;
@@ -318,5 +414,5 @@
         .navbar i {
             display: none;
         }
-    }
+    } */
 </style>
