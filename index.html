@@ -142,8 +142,41 @@
         </div>
     </section>
 
-    <footer class="black-footer">
-        <p class="pink-text">Môn thiết kế website lớp N3</p>
+    <section class="contact" id="contact">
+        <h2 class="heading">
+            Contact <span>Me</span>
+        </h2>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61553837082882"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/onii.onny/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@onii.onny"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://github.com/phamhaanh1024"><i class="fa-brands fa-github" style="color: #ff0073;"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About Me</a>
+
+            </li>
+            <li>
+                <a href="">Explore</a>
+
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            Môn | Thiết Kế Web Lớp N3
+        </p>
     </footer>
 </body>
 
@@ -187,7 +220,9 @@
         font-size: 1.1rem;
     }
     
-    .navbar a:hover {}
+    .navbar a:hover {
+        border-bottom: 3px solid #b6085f;
+    }
     
     .navbar a.active {
         color: #b6085f;
@@ -199,6 +234,7 @@
         font-size: 2rem;
         cursor: pointer;
         transition: 0.3s ease;
+        z-index: 100;
     }
     
     span {
@@ -272,6 +308,7 @@
     /* About */
     
     .about {
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -385,6 +422,72 @@
         border-radius: 5px;
         padding: 3px 10px;
     }
+    /* footer */
+    
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 40px 0;
+        background-color: #b6085f;
+    }
+    
+    .footer .social {
+        text-align: center;
+        padding-bottom: 25px;
+        color: aliceblue;
+    }
+    
+    .footer .social a {
+        font-size: 25px;
+        color: aliceblue;
+        border: 2px solid aliceblue;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    
+    .footer .social a:hover {
+        transform: scale(1.2) translateY(-10px);
+        background-color: aliceblue;
+        color: #b6085f;
+    }
+    
+    .footer ul {
+        margin-top: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    .footer ul li a {
+        color: aliceblue;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease;
+    }
+    
+    .footer ul li a:hover {
+        border-bottom: 3px solid aliceblue;
+    }
+    
+    .footer ul li {
+        display: inline-block;
+        padding: 0 15px;
+    }
+    
+    .footer .copyright {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+        color: aliceblue;
+    }
+    /* end footer */
     /* Mobile device */
     /*     
     @media only screen and (max-width:850px) {
