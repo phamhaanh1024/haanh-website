@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/fontawesome-free-6.5.1-web/css/all.min.css">
+
     <title>•┈🎀┈•</title>
 </head>
 
@@ -52,7 +52,73 @@
     </section>
 
 
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="heading"> What My <span>Client Say</span> </h2>
+            </div>
+            <div class="testimonials-content">
+                <div class="testimonials-slider js-testimonials-slider">
+                    <div>
+                        <div class="testimonials-item">
+                            <div class="info">
+                                <img src="img/Dung.jpg" alt="Dung">
+                                <div class="text-box">
+                                    <h3 class="name">Đỗ Ngọc Dung</h3>
+                                    <span class="job">Student</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet .</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
 
+                        <div class="testimonials-item">
+                            <div class="info">
+                                <img src="img/Nga.jpg" alt="Nga">
+                                <div class="text-box">
+                                    <h3 class="name">Nguyễn Phương Nga</h3>
+                                    <span class="job">Student</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="testimonials-item">
+                            <div class="info">
+                                <img src="img/Thương.jpg" alt="Thương">
+                                <div class="text-box">
+                                    <h3 class="name">Vũ Thị Huyền Thương</h3>
+                                    <span class="job">Student</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <section>
         <div class="title">
@@ -210,389 +276,3 @@
 
 
 </html>
-
-<style>
-    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    ul {
-        list-style: none;
-    }
-    /* navbar */
-    
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        color: rgb(28, 21, 18);
-        background: rgb(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-    }
-    
-    .navbar a {
-        color: rgb(28, 21, 18);
-        font-style: bold;
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-    
-    .navbar a:hover {
-        border-bottom: 3px solid #b6085f;
-    }
-    
-    .navbar a.active {
-        color: #b6085f;
-        border-bottom: 3px solid #b6085f;
-    }
-    
-    .navbar .logo {
-        margin-left: 50px;
-        font-size: 2rem;
-        cursor: pointer;
-        transition: 0.3s ease;
-        z-index: 100;
-    }
-    
-    span {
-        color: #b6085f;
-    }
-    
-    .navbar .logo:hover {
-        transform: scale(1.1);
-    }
-    
-    .nav-links {
-        display: flex;
-        align-items: center;
-    }
-    
-    .nav-links li {
-        margin: 0 30px;
-    }
-    /* header */
-    
-    header {
-        width: 100vw;
-        height: 100vh;
-        background-image: url(img/Bg1.jpg);
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    
-    .header-content {
-        color: aliceblue;
-        margin-top: 130px;
-        text-align: center;
-    }
-    
-    .header-content h2 {
-        font-size: 4vmin;
-    }
-    
-    .line {
-        width: 150px;
-        height: 4px;
-        background-color: rgb(182, 8, 95);
-        margin: 10px auto;
-        border-radius: 5px;
-    }
-    
-    .header-content h1 {
-        font-size: 5vmin;
-        margin-top: 20px;
-        margin-bottom: 25px;
-    }
-    
-    .navbar i {
-        position: absolute;
-        top: 30px;
-        left: 570px;
-        font-size: 30px;
-        cursor: pointer;
-    }
-    /* Events */
-    /* About */
-    
-    .about {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10rem;
-    }
-    
-    .about-circle {
-        position: absolute;
-        left: -150px;
-        margin-top: 15rem;
-        height: 30vw;
-        width: 30vw;
-        border-radius: 50%;
-        background-color: #b6085f;
-    }
-    
-    .about-img {
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        border: 20px solid #b6085f;
-    }
-    
-    .about-img img {
-        position: relative;
-        width: 30vw;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-    
-    .heading {
-        text-align: center;
-        font-size: 4.5rem;
-    }
-    
-    .about-content h2 {
-        text-align: left;
-        line-height: 1;
-    }
-    
-    .about-content h3 {
-        font-size: 2.6rem;
-    }
-    
-    .about-content p {
-        margin-top: 10px;
-        font-size: 1.2rem;
-    }
-    /* End About */
-    /* Excercise */
-    
-    section {
-        width: 80%;
-        margin: 80px auto;
-    }
-    
-    .title {
-        text-align: center;
-        font-size: 4vmin;
-        color: rgb(103, 0, 89)
-    }
-    
-    .card-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-        margin-top: 50px;
-    }
-    
-    .card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    
-    .card {
-        width: 325px;
-        background-color: #ffe6fd;
-        border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        transition: 0.6s ease;
-        margin-bottom: 20px;
-    }
-    
-    .card:hover {
-        transform: translateY(-20px);
-    }
-    
-    .card-content {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .card-content h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    
-    .card-content p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 20px;
-    }
-    
-    .card-button {
-        display: inline block;
-        background-color: rgb(182, 8, 95);
-        color: aliceblue;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 3px 10px;
-    }
-    /* End Exercise */
-    /* Contact */
-    
-    .contact h2 {
-        margin-bottom: 3rem;
-    }
-    
-    .contact .action {
-        max-width: 40rem;
-        margin: 1rem auto;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .contact .action .input-box {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .contact .action .input-box input,
-    .contact .action textarea {
-        width: 100%;
-        padding: 1rem;
-        font-size: 1rem;
-        color: #000000;
-        background: white;
-        border-radius: 0.8rem;
-        border: 2px solid #b6085f;
-        margin: 0.7rem 0;
-        resize: none;
-    }
-    
-    .btn {
-        text-align: center;
-        display: inline-block;
-        padding: 0.7rem 1.5rem;
-        background: #b6085f;
-        border-radius: 2rem;
-        font-size: 0.9rem;
-        color: aliceblue;
-        border: 2px solid transparent;
-        letter-spacing: 0.1rem;
-        font-weight: 500;
-        transition: 0.3s ease;
-        cursor: pointer;
-    }
-    
-    .btn:hover {
-        transform: scale(1.05);
-        background: aliceblue;
-        color: #b6085f;
-        border: 2px solid #b6085f;
-    }
-    /* End Contact */
-    /* footer */
-    
-    .footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        padding: 40px 0;
-        background-color: #000000;
-    }
-    
-    .footer .social {
-        text-align: center;
-        padding-bottom: 25px;
-        color: aliceblue;
-    }
-    
-    .footer .social a {
-        font-size: 25px;
-        color: aliceblue;
-        border: 2px solid aliceblue;
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 50%;
-        margin: 0 10px;
-    }
-    
-    .footer .social a:hover {
-        transform: scale(1.2) translateY(-10px);
-        background-color: aliceblue;
-        color: #b6085f;
-    }
-    
-    .footer ul {
-        margin-top: 0;
-        padding: 0;
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 0;
-        text-align: center;
-    }
-    
-    .footer ul li a {
-        color: aliceblue;
-        border-bottom: 3px solid transparent;
-        transition: 0.3s ease;
-    }
-    
-    .footer ul li a:hover {
-        border-bottom: 3px solid aliceblue;
-    }
-    
-    .footer ul li {
-        display: inline-block;
-        padding: 0 15px;
-    }
-    
-    .footer .copyright {
-        margin-top: 50px;
-        text-align: center;
-        font-size: 16px;
-        color: aliceblue;
-    }
-    /* end footer */
-    /* Mobile device */
-    /*     
-    @media only screen and (max-width:850px) {
-        .navbar {
-            padding: 0;
-            position: relative;
-        }
-        .logo {
-            position: absolute;
-            top: 30px;
-            left: 50px;
-        }
-        .nav-links {
-            flex-direction: column;
-            width: 100%;
-            height: 100vh;
-            justify-content: center;
-            background: #e694e0;
-        }
-        .nav-links li {
-            margin: 30px auto;
-            justify-content: center;
-        }
-    }
-    
-    @media only screen and (min-width: 851px) {
-        .navbar i {
-            display: none;
-        }
-    } */
-</style>
