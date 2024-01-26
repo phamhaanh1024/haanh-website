@@ -27,6 +27,7 @@ ul {
     color: rgb(28, 21, 18);
     background: rgb(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
 .navbar a {
@@ -88,6 +89,19 @@ header {
     color: aliceblue;
     margin-top: 130px;
     text-align: center;
+    transform: translateY(0);
+    /* Bắt đầu từ trên cùng (top=0) */
+    animation: slideDown 1s ease-in-out;
+    /* Áp dụng animation trong 0.5 giây với hiệu ứng ease-in-out */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .header-content h2 {
