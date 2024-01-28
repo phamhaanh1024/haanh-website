@@ -1,322 +1,377 @@
-                                                                                                                                            :root {
-                                                                                                                                               --pink: #fff;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
-                                                                                                                                           * {
-                                                                                                                                               margin: 0;
-                                                                                                                                               padding: 0;
-                                                                                                                                               box-sizing: border-box;
-                                                                                                                                               outline: none;
-                                                                                                                                               border: none;
-                                                                                                                                               text-decoration: none;
-                                                                                                                                               transition: .2s linear;
-                                                                                                                                               font-family: 'Nunito Sans';
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           html {
-                                                                                                                                               font-size: 62.5%;
-                                                                                                                                               scroll-behavior: smooth;
-                                                                                                                                               scroll-padding-top: 6rem;
-                                                                                                                                               overflow-x: hidden;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .btn {
-                                                                                                                                               display: inline-block;
-                                                                                                                                               margin-top: 1rem;
-                                                                                                                                               border-radius: 5rem;
-                                                                                                                                               background: #333;
-                                                                                                                                               color: #fff;
-                                                                                                                                               padding: .9rem 3.5rem;
-                                                                                                                                               cursor: pointer;
-                                                                                                                                               font-size: 1.7rem;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .btn:hover {
-                                                                                                                                               background: hotpink;
-                                                                                                                                           }
-                                                                                                                                           /* header */
-                                                                                                                                           
-                                                                                                                                           header {
-                                                                                                                                               position: fixed;
-                                                                                                                                               top: 0;
-                                                                                                                                               left: 0;
-                                                                                                                                               right: 0;
-                                                                                                                                               background: #fff;
-                                                                                                                                               padding: 2rem 9%;
-                                                                                                                                               display: flex;
-                                                                                                                                               align-items: center;
-                                                                                                                                               justify-content: space-between;
-                                                                                                                                               z-index: 1000;
-                                                                                                                                               box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .logo {
-                                                                                                                                               font-size: 3rem;
-                                                                                                                                               color: #333;
-                                                                                                                                               font-weight: bolder;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .navbar a {
-                                                                                                                                               font-size: 2rem;
-                                                                                                                                               padding: 0 2rem;
-                                                                                                                                               margin-right: 20px;
-                                                                                                                                               color: #666;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .navbar a:hover {
-                                                                                                                                               color: rgb(16, 184, 49);
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .icons a {
-                                                                                                                                               font-size: 2.5rem;
-                                                                                                                                               color: #333;
-                                                                                                                                               margin-left: 1.5rem;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .icons a:hover {
-                                                                                                                                               color: rgb(76, 218, 10);
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .search-container {
-                                                                                                                                               display: flex;
-                                                                                                                                               border-radius: 5px;
-                                                                                                                                               /* Bo góc của search bar */
-                                                                                                                                               overflow: hidden;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header.search-container [type="text"] {
-                                                                                                                                               padding: 8px;
-                                                                                                                                               border: 3px solid #ccc;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .search-container button {
-                                                                                                                                               padding: 8px 12px;
-                                                                                                                                               background-color: #4CAF50;
-                                                                                                                                               color: #fff;
-                                                                                                                                               border: none;
-                                                                                                                                               cursor: pointer;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           header .search-container button:hover {
-                                                                                                                                               background-color: #45a049;
-                                                                                                                                           }
-                                                                                                                                           /* page1 */
-                                                                                                                                           
-                                                                                                                                           .page {
-                                                                                                                                               max-width: 100%;
-                                                                                                                                               margin: 0 auto;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1 {
-                                                                                                                                               position: relative;
-                                                                                                                                               width: 100%;
-                                                                                                                                               overflow: hidden;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1 img {
-                                                                                                                                               margin-top: 7.5rem;
-                                                                                                                                               width: 100%;
-                                                                                                                                               height: auto;
-                                                                                                                                               display: block;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content1 {
-                                                                                                                                               position: absolute;
-                                                                                                                                               top: 25%;
-                                                                                                                                               left: 35%;
-                                                                                                                                               text-align: start;
-                                                                                                                                               color: white;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content1 p,
-                                                                                                                                           .page1_content1 h2,
-                                                                                                                                           .page1_content1 h3 {
-                                                                                                                                               margin-bottom: 10px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content1 p {
-                                                                                                                                               font-size: 40px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content1 h2 {
-                                                                                                                                               font-size: 65px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content1 h3 {
-                                                                                                                                               font-size: 50px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content2 {
-                                                                                                                                               position: absolute;
-                                                                                                                                               bottom: 10%;
-                                                                                                                                               left: 10%;
-                                                                                                                                               text-align: start;
-                                                                                                                                               color: white;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page1_content2 p {
-                                                                                                                                               font-size: 20px;
-                                                                                                                                               margin-bottom: 3px;
-                                                                                                                                               margin-top: 3px;
-                                                                                                                                           }
-                                                                                                                                           /* page1 end */
-                                                                                                                                           /* page4 */
-                                                                                                                                           
-                                                                                                                                           .page4_content1 {
-                                                                                                                                               margin: 20px;
-                                                                                                                                               margin-top: 30px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content1 h1 {
-                                                                                                                                               font-size: 100px;
-                                                                                                                                               color: #829c2d;
-                                                                                                                                               margin: 10px 20px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content1 h3 {
-                                                                                                                                               font-size: 45px;
-                                                                                                                                               color: #333;
-                                                                                                                                               margin: 20px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content2 {
-                                                                                                                                               display: flex;
-                                                                                                                                               justify-content: space-between;
-                                                                                                                                               margin: 20px;
-                                                                                                                                               font-size: 35px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content2 p {
-                                                                                                                                               font-size: 25px;
-                                                                                                                                               line-height: 1.5;
-                                                                                                                                               margin: 10px 20px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content2 button {
-                                                                                                                                               background-color: #4CAF50;
-                                                                                                                                               color: white;
-                                                                                                                                               padding: 5px 5px;
-                                                                                                                                               border: none;
-                                                                                                                                               border-radius: 5px;
-                                                                                                                                               font-size: 15px;
-                                                                                                                                               cursor: pointer;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_content2 button:hover {
-                                                                                                                                               background-color: #45a049;
-                                                                                                                                               border-radius: 20px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_box {
-                                                                                                                                               display: grid;
-                                                                                                                                               grid-template-columns: repeat(3, 1fr);
-                                                                                                                                               gap: 20px;
-                                                                                                                                               padding: 10px;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page4_box img {
-                                                                                                                                               width: 100%;
-                                                                                                                                               height: auto;
-                                                                                                                                               max-width: 100%;
-                                                                                                                                           }
-                                                                                                                                           /* page4 end */
-                                                                                                                                           /* page5 */
-                                                                                                                                           
-                                                                                                                                           .page5 {
-                                                                                                                                               position: relative;
-                                                                                                                                               width: 100%;
-                                                                                                                                               overflow: hidden;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page5 img {
-                                                                                                                                               width: 100%;
-                                                                                                                                               height: auto;
-                                                                                                                                               display: block;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page5_content {
-                                                                                                                                               position: absolute;
-                                                                                                                                               top: 10%;
-                                                                                                                                               left: 10%;
-                                                                                                                                               text-align: start;
-                                                                                                                                               color: white;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page5_content h2 {
-                                                                                                                                               font-size: 80px;
-                                                                                                                                               margin-bottom: 3px;
-                                                                                                                                               margin-top: 3px;
-                                                                                                                                               text-align: start;
-                                                                                                                                               color: #313b30;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page5_content p {
-                                                                                                                                               font-size: 20px;
-                                                                                                                                               margin-bottom: 3px;
-                                                                                                                                               margin-top: 40px;
-                                                                                                                                               color: #313b30;
-                                                                                                                                           }
-                                                                                                                                           /* end page5 */
-                                                                                                                                           /* page 9 */
-                                                                                                                                           
-                                                                                                                                           .page9 {
-                                                                                                                                               position: relative;
-                                                                                                                                               width: 100%;
-                                                                                                                                               overflow: hidden;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page9 img {
-                                                                                                                                               width: 100%;
-                                                                                                                                               height: auto;
-                                                                                                                                               display: block;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page9_content {
-                                                                                                                                               position: absolute;
-                                                                                                                                               top: 30%;
-                                                                                                                                               left: 17%;
-                                                                                                                                               text-align: start;
-                                                                                                                                               color: white;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .page9_content h2 {
-                                                                                                                                               font-size: 50px;
-                                                                                                                                               margin-bottom: 3px;
-                                                                                                                                               margin-top: 3px;
-                                                                                                                                               text-align: end;
-                                                                                                                                           }
-                                                                                                                                           /* page9 end */
-                                                                                                                                           /* footer section */
-                                                                                                                                           
-                                                                                                                                           .footer {
-                                                                                                                                               background: #000;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .footer .box-container {
-                                                                                                                                               display: flex;
-                                                                                                                                               flex-wrap: wrap;
-                                                                                                                                               gap: 20rem;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .footer .box-container .box {
-                                                                                                                                               flex: 1 1 25rem;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .footer .box-container .box h3 {
-                                                                                                                                               color: #fff;
-                                                                                                                                               font-size: 2.5rem;
-                                                                                                                                               padding: 1rem 0;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .footer .box-container .box a {
-                                                                                                                                               display: block;
-                                                                                                                                               color: #fff;
-                                                                                                                                               font-size: 2rem;
-                                                                                                                                               padding: 1rem 0;
-                                                                                                                                           }
-                                                                                                                                           
-                                                                                                                                           .footer .box-container .box a:hover {
-                                                                                                                                               color: hotpink;
-                                                                                                                                               text-decoration: underline;
-                                                                                                                                           }
+                                                                                                                                                                        :root {
+                                                                                                                                                                           --pink: #fff;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
+                                                                                                                                                                       * {
+                                                                                                                                                                           margin: 0;
+                                                                                                                                                                           padding: 0;
+                                                                                                                                                                           box-sizing: border-box;
+                                                                                                                                                                           outline: none;
+                                                                                                                                                                           border: none;
+                                                                                                                                                                           text-decoration: none;
+                                                                                                                                                                           transition: .2s linear;
+                                                                                                                                                                           font-family: 'Nunito Sans';
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       html {
+                                                                                                                                                                           font-size: 62.5%;
+                                                                                                                                                                           scroll-behavior: smooth;
+                                                                                                                                                                           scroll-padding-top: 6rem;
+                                                                                                                                                                           overflow-x: hidden;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .btn {
+                                                                                                                                                                           display: inline-block;
+                                                                                                                                                                           margin-top: 1rem;
+                                                                                                                                                                           border-radius: 5rem;
+                                                                                                                                                                           background: #333;
+                                                                                                                                                                           color: #fff;
+                                                                                                                                                                           padding: .9rem 3.5rem;
+                                                                                                                                                                           cursor: pointer;
+                                                                                                                                                                           font-size: 1.7rem;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .btn:hover {
+                                                                                                                                                                           background: hotpink;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* header */
+                                                                                                                                                                       
+                                                                                                                                                                       header {
+                                                                                                                                                                           position: fixed;
+                                                                                                                                                                           top: 0;
+                                                                                                                                                                           left: 0;
+                                                                                                                                                                           right: 0;
+                                                                                                                                                                           background: #fff;
+                                                                                                                                                                           padding: 2rem 9%;
+                                                                                                                                                                           display: flex;
+                                                                                                                                                                           align-items: center;
+                                                                                                                                                                           justify-content: space-between;
+                                                                                                                                                                           z-index: 1000;
+                                                                                                                                                                           box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .logo {
+                                                                                                                                                                           font-size: 3rem;
+                                                                                                                                                                           color: #333;
+                                                                                                                                                                           font-weight: bolder;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .navbar a {
+                                                                                                                                                                           font-size: 2rem;
+                                                                                                                                                                           padding: 0 2rem;
+                                                                                                                                                                           margin-right: 20px;
+                                                                                                                                                                           color: #666;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .navbar a:hover {
+                                                                                                                                                                           color: rgb(16, 184, 49);
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .icons a {
+                                                                                                                                                                           font-size: 2.5rem;
+                                                                                                                                                                           color: #333;
+                                                                                                                                                                           margin-left: 1.5rem;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .icons a:hover {
+                                                                                                                                                                           color: rgb(76, 218, 10);
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .search-container {
+                                                                                                                                                                           display: flex;
+                                                                                                                                                                           border-radius: 5px;
+                                                                                                                                                                           /* Bo góc của search bar */
+                                                                                                                                                                           overflow: hidden;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header.search-container [type="text"] {
+                                                                                                                                                                           padding: 8px;
+                                                                                                                                                                           border: 3px solid #ccc;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .search-container button {
+                                                                                                                                                                           padding: 8px 12px;
+                                                                                                                                                                           background-color: #4CAF50;
+                                                                                                                                                                           color: #fff;
+                                                                                                                                                                           border: none;
+                                                                                                                                                                           cursor: pointer;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       header .search-container button:hover {
+                                                                                                                                                                           background-color: #45a049;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* page1 */
+                                                                                                                                                                       
+                                                                                                                                                                       .page {
+                                                                                                                                                                           max-width: 100%;
+                                                                                                                                                                           margin: 0 auto;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1 {
+                                                                                                                                                                           position: relative;
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           overflow: hidden;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1 img {
+                                                                                                                                                                           margin-top: 7.5rem;
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           display: block;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content1 {
+                                                                                                                                                                           position: absolute;
+                                                                                                                                                                           top: 25%;
+                                                                                                                                                                           left: 35%;
+                                                                                                                                                                           text-align: start;
+                                                                                                                                                                           color: white;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content1 p,
+                                                                                                                                                                       .page1_content1 h2,
+                                                                                                                                                                       .page1_content1 h3 {
+                                                                                                                                                                           margin-bottom: 10px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content1 p {
+                                                                                                                                                                           font-size: 40px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content1 h2 {
+                                                                                                                                                                           font-size: 65px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content1 h3 {
+                                                                                                                                                                           font-size: 50px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content2 {
+                                                                                                                                                                           position: absolute;
+                                                                                                                                                                           bottom: 10%;
+                                                                                                                                                                           left: 10%;
+                                                                                                                                                                           text-align: start;
+                                                                                                                                                                           color: white;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page1_content2 p {
+                                                                                                                                                                           font-size: 20px;
+                                                                                                                                                                           margin-bottom: 3px;
+                                                                                                                                                                           margin-top: 3px;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* page1 end */
+                                                                                                                                                                       /* page4 */
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content1 {
+                                                                                                                                                                           margin: 20px;
+                                                                                                                                                                           margin-top: 30px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content1 h1 {
+                                                                                                                                                                           font-size: 100px;
+                                                                                                                                                                           color: #829c2d;
+                                                                                                                                                                           margin: 10px 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content1 h3 {
+                                                                                                                                                                           font-size: 45px;
+                                                                                                                                                                           color: #333;
+                                                                                                                                                                           margin: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content2 {
+                                                                                                                                                                           font-size: 35px;
+                                                                                                                                                                           display: flex;
+                                                                                                                                                                           justify-content: space-between;
+                                                                                                                                                                           margin: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content2 p {
+                                                                                                                                                                           font-size: 25px;
+                                                                                                                                                                           margin: 10px 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content2 .btn {
+                                                                                                                                                                           background-color: #486138;
+                                                                                                                                                                           color: white;
+                                                                                                                                                                           border: none;
+                                                                                                                                                                           cursor: pointer;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_content2 button:hover {
+                                                                                                                                                                           background-color: #45a049;
+                                                                                                                                                                           border-radius: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_box {
+                                                                                                                                                                           display: grid;
+                                                                                                                                                                           grid-template-columns: repeat(3, 1fr);
+                                                                                                                                                                           gap: 20px;
+                                                                                                                                                                           padding: 10px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page4_box img {
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           max-width: 100%;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* page4 end */
+                                                                                                                                                                       /* page5 */
+                                                                                                                                                                       
+                                                                                                                                                                       .page5 {
+                                                                                                                                                                           position: relative;
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           overflow: hidden;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page5 img {
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           display: block;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page5_content {
+                                                                                                                                                                           position: absolute;
+                                                                                                                                                                           top: 10%;
+                                                                                                                                                                           left: 10%;
+                                                                                                                                                                           text-align: start;
+                                                                                                                                                                           color: white;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page5_content h2 {
+                                                                                                                                                                           font-size: 80px;
+                                                                                                                                                                           margin-bottom: 3px;
+                                                                                                                                                                           margin-top: 3px;
+                                                                                                                                                                           text-align: start;
+                                                                                                                                                                           color: #313b30;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page5_content p {
+                                                                                                                                                                           font-size: 20px;
+                                                                                                                                                                           margin-bottom: 3px;
+                                                                                                                                                                           margin-top: 40px;
+                                                                                                                                                                           color: #313b30;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* end page5 */
+                                                                                                                                                                       /* page8 */
+                                                                                                                                                                       
+                                                                                                                                                                       .page8 {
+                                                                                                                                                                           text-align: center;
+                                                                                                                                                                           margin: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page8 h2 {
+                                                                                                                                                                           font-size: 36px;
+                                                                                                                                                                           color: #333;
+                                                                                                                                                                           margin-bottom: 10px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page8 p {
+                                                                                                                                                                           font-size: 18px;
+                                                                                                                                                                           color: #666;
+                                                                                                                                                                           margin-bottom: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .grid {
+                                                                                                                                                                           display: grid;
+                                                                                                                                                                           grid-template-columns: repeat(4, 4fr);
+                                                                                                                                                                           gap: 20px;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .grid-item {
+                                                                                                                                                                           border: 1px solid #ddd;
+                                                                                                                                                                           padding: 10px;
+                                                                                                                                                                           text-align: center;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .grid img {
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           max-width: 100%;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .grid div>div {
+                                                                                                                                                                           margin-top: 10px;
+                                                                                                                                                                           color: #555;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page8_box {
+                                                                                                                                                                           border: 1px solid #ddd;
+                                                                                                                                                                           padding: 10px;
+                                                                                                                                                                           text-align: center;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page8_content {
+                                                                                                                                                                           display: flex;
+                                                                                                                                                                           justify-content: space-between;
+                                                                                                                                                                           margin-top: 10px;
+                                                                                                                                                                           color: #555;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .grid img {
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           max-width: 100%;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* page8 end */
+                                                                                                                                                                       /* page 9 */
+                                                                                                                                                                       
+                                                                                                                                                                       .page9 {
+                                                                                                                                                                           position: relative;
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           overflow: hidden;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page9 img {
+                                                                                                                                                                           width: 100%;
+                                                                                                                                                                           height: auto;
+                                                                                                                                                                           display: block;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page9_content {
+                                                                                                                                                                           position: absolute;
+                                                                                                                                                                           top: 30%;
+                                                                                                                                                                           left: 17%;
+                                                                                                                                                                           text-align: start;
+                                                                                                                                                                           color: white;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .page9_content h2 {
+                                                                                                                                                                           font-size: 50px;
+                                                                                                                                                                           margin-bottom: 3px;
+                                                                                                                                                                           margin-top: 3px;
+                                                                                                                                                                           text-align: end;
+                                                                                                                                                                       }
+                                                                                                                                                                       /* page9 end */
+                                                                                                                                                                       /* footer section */
+                                                                                                                                                                       
+                                                                                                                                                                       .footer {
+                                                                                                                                                                           background: #000;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .footer .box-container {
+                                                                                                                                                                           display: flex;
+                                                                                                                                                                           flex-wrap: wrap;
+                                                                                                                                                                           gap: 20rem;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .footer .box-container .box {
+                                                                                                                                                                           flex: 1 1 25rem;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .footer .box-container .box h3 {
+                                                                                                                                                                           color: #fff;
+                                                                                                                                                                           font-size: 2.5rem;
+                                                                                                                                                                           padding: 1rem 0;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .footer .box-container .box a {
+                                                                                                                                                                           display: block;
+                                                                                                                                                                           color: #fff;
+                                                                                                                                                                           font-size: 2rem;
+                                                                                                                                                                           padding: 1rem 0;
+                                                                                                                                                                       }
+                                                                                                                                                                       
+                                                                                                                                                                       .footer .box-container .box a:hover {
+                                                                                                                                                                           color: hotpink;
+                                                                                                                                                                           text-decoration: underline;
+                                                                                                                                                                       }
