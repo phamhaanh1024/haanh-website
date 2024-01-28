@@ -1,0 +1,91 @@
+/* banner7 */
+
+.banner7 {
+    position: relative;
+}
+
+.image-banner7 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.text-banner7 {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    text-align: end;
+    color: white;
+}
+
+.text-banner7 h1 {
+    font-size: 80px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.text-banner7 h3 {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.text-banner7 p {
+    font-size: 37px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* banner 2 */
+
+.banner2 {
+    display: flex;
+    max-height: 100%;
+    /* Set the maximum height to the viewport height */
+}
+
+.image-banner2 {
+    position: relative;
+    width: 100%;
+    /* Adjust the width as needed */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+.image-banner2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+}
+
+.plant-info {
+    position: absolute;
+    /* top: 99%;
+    left: 20%; */
+    z-index: 100;
+    transform: translate(-320%, -50%);
+    text-align: start;
+    color: rgb(0, 0, 0);
+}
+
+.plant-info h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.plant-info h2 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.text-banner2 {
+    display: flex;
+    height: 100%;
+    justify-content: end;
+    padding: 20px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+}
