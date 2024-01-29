@@ -148,6 +148,19 @@ img {
     cursor: pointer;
 }
 
+.nav__menu {
+    position: relative;
+}
+
+.nav__sub-menu {
+    position: absolute;
+    display: none;
+}
+
+.nav__sub-menu.show-sub-menu {
+    display: block;
+}
+
 
 /* navigation for mobile device */
 

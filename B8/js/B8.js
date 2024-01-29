@@ -1,3 +1,32 @@
+// NAVBAR
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy các phần tử cần thiết
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    // Thêm sự kiện click cho nút toggle
+    navToggle.addEventListener('click', function() {
+        // Toggle class 'show' trên phần tử menu
+        navMenu.classList.toggle('show');
+    });
+
+    // Lấy tất cả các mục cha có lớp 'nav__item' để thêm sự kiện click
+    var navItems = document.querySelectorAll('.nav__item');
+
+    // Loop qua từng mục và thêm sự kiện click
+    navItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Kiểm tra xem mục có mục con hay không
+            var subMenu = this.querySelector('.nav__sub-menu');
+
+            if (subMenu) {
+                // Nếu có mục con, toggle class 'show' để hiển thị hoặc ẩn mục con
+                subMenu.classList.toggle('show-sub-menu');
+            }
+        });
+    });
+});
+
 // Show menu 
 
 const navMenu = document.getElementById('nav-menu'),
