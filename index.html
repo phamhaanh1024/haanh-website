@@ -7,31 +7,34 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
     <title>•┈🎀┈•</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <h1 class="logo"> PH<span>a.</span> </h1>
-        <ul class="nav-links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <!-- <i class="fa-solid fa-bars" style="color: #b6085f;"></i> -->
-    </nav>
 
-    <header>
-        <div class="header-content">
+    <header class="header">
+        <a href="#home" class="logo">
+            PH<span>a.</span>
+        </a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a class="active" href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonial</a>
+            <a href="#works">Works</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
             <h2>Pham Ha Anh 222001416</h2>
             <div class="line"></div>
             <h1>WELCOME TO MY WEBSITE</h1>
-            <!-- <a href="page.html" class="ctn">Porfolio</a> -->
         </div>
-    </header>
+    </section>
+
     <section class="about" id="about">
         <div class="about-circle"></div>
 
@@ -41,18 +44,19 @@
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>
-                <span>Web Designer</span>
+            <h3 class="text-animation">
+                <span></span>
             </h3>
             <p> Tôi đến từ Hà Nội và là một người trẻ đang tìm kiếm ý nghĩa và trải nghiệm trong cuộc sống.
             </p>
             <p> Tính cách của tôi có thể mô tả là vui tươi, tỏa sáng. Tôi luôn muốn thách thức bản thân để đạt được mục tiêu và ước mơ của mình. Tôi tin rằng sự học hỏi không ngừng là chìa khóa cho sự phát triển cá nhân và sự thành công trong tương lai.
             </p>
+            <a href="#" class="btn">See More</a>
         </div>
     </section>
 
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
                 <h2 class="heading"> What My <span>Client Say</span> </h2>
@@ -120,7 +124,7 @@
 
     </section>
 
-    <section>
+    <section class="works" id="works">
         <div class="title">
             <h1>MY EXCERCISES</h1>
             <div class="line"></div>
@@ -273,6 +277,8 @@
             Môn | Thiết Kế Web Lớp N3
         </p>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 
 
