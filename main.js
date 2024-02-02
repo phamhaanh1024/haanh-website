@@ -25,3 +25,14 @@ window.onscroll = () => {
         }
     });
 };
+
+// REMOVE SIDEBAR
+
+const navLink = document.querySelectorAll('.sidebar__link')
+
+const linkAction = () => {
+    const navMenu = document.getElementById('sidebar')
+        // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))

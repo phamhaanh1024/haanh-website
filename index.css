@@ -38,6 +38,7 @@ body {
     justify-content: space-between;
     z-index: 100;
     font-weight: 700;
+    transition: margin-right 0.5s;
 }
 
 .logo {
@@ -74,6 +75,46 @@ span {
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+    z-index: 102;
+    /* Set a higher z-index to ensure it's on top */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsl(321, 98%, 21%);
+    backdrop-filter: blur(16px);
+    --webkit-backdrop-filter: blur(16px);
+    width: 45%;
+    height: 100rem;
+    padding: 6rem 3rem 0;
+    transition: right .4s;
+    z-index: 101;
+    text-align: center;
+    /* Set a z-index to ensure it's below the menu icon */
+}
+
+.sidebar__list {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.sidebar__list a {
+    margin-top: 20px;
+    color: aliceblue;
+    padding-bottom: 15px;
+}
+
+.sidebar__list a:hover {
+    color: #ffe600;
+}
+
+.sidebar.show {
+    right: 0;
+    /* Show the sidebar when the 'show' class is added */
 }
 
 
@@ -624,3 +665,12 @@ section {
 
 
 /* End Mobile device */
+
+
+/* Desktop device */
+
+@media screen and (min-width: 895px) {
+    .sidebar {
+        display: none;
+    }
+}
