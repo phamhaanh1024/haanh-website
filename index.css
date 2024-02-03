@@ -349,7 +349,7 @@ span {
 .skills__header {
     display: flex;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 2.5rem;
     cursor: pointer;
 }
@@ -557,7 +557,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .card img {
