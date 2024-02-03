@@ -31,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: rgb(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
