@@ -26,6 +26,28 @@ window.onscroll = () => {
     });
 };
 
+// ABOUT ANIMATION
+
+document.addEventListener("DOMContentLoaded", function() {
+    var aboutCircle = document.querySelector(".about-circle");
+    var aboutImg = document.querySelector(".about-img");
+    var aboutContent = document.querySelector(".about-content");
+
+    window.addEventListener("scroll", function() {
+        var aboutPosition = document.querySelector(".about").offsetTop;
+        var windowHeight = window.innerHeight;
+        var scrollPosition = window.scrollY || window.pageYOffset;
+
+        if (scrollPosition > aboutPosition - windowHeight / 2) {
+            aboutCircle.style.opacity = 1;
+            aboutCircle.style.transform = "translateX(0)";
+            aboutImg.style.opacity = 1;
+            aboutImg.style.transform = "translateX(0)";
+            aboutContent.style.opacity = 1;
+            aboutContent.style.transform = "translateX(0)";
+        }
+    });
+});
 // REMOVE SIDEBAR
 
 const navLink = document.querySelectorAll('.sidebar__link')
@@ -57,3 +79,6 @@ function toggleSkills() {
 skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
+
+
+// DARK/LIGHT THEME

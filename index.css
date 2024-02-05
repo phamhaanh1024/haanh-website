@@ -336,14 +336,116 @@ span {
     border: 2px solid #b6085f;
 }
 
+.about-circle,
+.about-img,
+.about-content {
+    transition: transform 1s ease-out, opacity 2s ease-out;
+}
+
+.about-circle {
+    opacity: 0;
+    transform: translateX(-80%);
+}
+
+.about-img {
+    opacity: 0;
+    transform: translateX(-80%);
+}
+
+.about-content {
+    opacity: 0;
+    transform: translateX(80%);
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /* End About */
+
+
+/* Qualification */
+
+.qualification__container {
+    row-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+}
+
+.qualification__title h3 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    font-weight: 700;
+}
+
+.qualification h6 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+.qualification h5 {
+    font-size: 2rem;
+    text-align: center;
+    color: #555;
+}
+
+.qualification__content {
+    text-align: start;
+}
+
+.qualification__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.qualification__title i {
+    font-size: 1.8rem;
+    font-weight: initial;
+}
+
+.qualification__info {
+    margin-top: 6rem;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.qualification__name {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    padding: 2rem;
+}
+
+.qualification__country,
+.qualification__year {
+    display: block;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.qualification__country {
+    margin-bottom: .5rem;
+}
 
 
 /* Skill */
 
 .skills__container {
     row-gap: 0;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
 }
 
 .skills__header {
@@ -474,64 +576,79 @@ span {
 
 /* Testimonials */
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 0 15px;
-}
+.testimonials {}
 
-.testimonials {
+.testimonials__wrapper {
     width: 100%;
-    padding: 100px 0;
-    background: #ffe6fd;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.testimonials-item {
-    background-color: hsl(0, 0%, 100%);
-    padding: 30px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-}
-
-.testimonials-item .info {
+    background-color: #ffe6fd;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 10rem;
 }
 
-.testimonials-item img {
-    max-width: 80px;
+.testimonials__wrapper h5 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.testimonials__cards {
+    width: 100%;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100rem;
+}
+
+.testimonials__card {
+    width: 60rem;
+    height: 25rem;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 20px 30px;
+    position: relative;
+    background: rgb(255, 255, 255);
+    box-shadow: 10px 20px 25px rgb(0, 0, 0, 0.2);
+    margin-right: 3rem;
+}
+
+.testimonials__card img {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 2px solid #f2f2f2;
     border-radius: 50%;
-    margin-right: 20px;
-    vertical-align: middle;
+    position: absolute;
+    top: -40px;
+    left: 20px;
 }
 
-.testimonials-item .name {
-    font-size: 24px;
-    text-transform: capitalize;
+.testimonials__card p {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.testimonials__card h4 {
     font-weight: 500;
-    color: #000000;
-    line-height: 1.2;
+    margin-bottom: 4px;
 }
 
-.testimonials-item .job {
-    text-transform: capitalize;
-    color: hsl(0, 0%, 40%);
+.testimonials__card i {
+    font-size: 60px;
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    color: #666;
 }
 
-.testimonials-item p {
-    margin-top: 20px;
-    color: hsl(0, 0%, 40%);
-}
-
-.testimonials-item .rating {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #edbc0b
+.testimonials__card:hover {
+    transform: scale(1.4);
+    color: #333;
+    background: #fff;
+    z-index: 10000;
 }
 
 
@@ -717,7 +834,7 @@ section {
     padding: 0 15px;
 }
 
-.footer .copyright {
+.footer .name {
     margin-top: 50px;
     text-align: center;
     font-size: 16px;
@@ -754,7 +871,7 @@ section {
         cursor: pointer;
     }
     .heading {
-        font-size: 4rem;
+        font-size: 5rem;
     }
     .skills__title {
         font-size: 2.3rem;
@@ -802,6 +919,27 @@ section {
         border: none;
         margin-bottom: 3rem;
         border: 25px solid #b6085f;
+    }
+    .testimonials__cards {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .testimonials__card {
+        margin: 40px 0;
+    }
+}
+
+@media(max-width:768px) {
+    .testimonials__cards {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .testimonials__card {
+        width: 30rem;
+        height: 25rem;
+        margin: 40px 0;
     }
 }
 
