@@ -81,4 +81,36 @@ skillsHeader.forEach((el) => {
 })
 
 
-// DARK/LIGHT THEME
+// PROJECT SLIDER
+// Lấy các phần tử cần thiết
+const slider = document.getElementById('slider');
+const slides = document.getElementById('slides');
+
+// Lấy chiều rộng của mỗi slide
+const slideWidth = document.querySelector('.slide').offsetWidth;
+
+// Thiết lập sự kiện khi trang web được tải
+window.onload = function() {
+    // Gọi hàm autoSlide() để tự động chuyển slide sau một khoảng thời gian
+    setInterval(autoSlide, 3000);
+};
+
+// Hàm chuyển slide tự động
+function autoSlide() {
+    // Lấy giá trị hiện tại của thuộc tính transform
+    const transformValue = window.getComputedStyle(slides).getPropertyValue('transform');
+    // Tính toán chỉ số của slide hiện tại
+    const currentIndex = Math.abs(parseInt(transformValue.split(',')[4]) / slideWidth);
+
+    // Chuyển đến slide kế tiếp (hoặc slide đầu tiên nếu đang ở slide cuối cùng)
+    slides.style.transition = 'transform 0.5s ease-in-out';
+    slides.style.transform = 'translateX(' + (-(currentIndex + 1) * slideWidth) + 'px)';
+
+    // Khi chuyển đến slide cuối cùng, thiết lập lại để chuyển đến slide đầu tiên mà không có hiệu ứng
+    slides.addEventListener('transitionend', function() {
+        if (currentIndex === slides.children.length - 1) {
+            slides.style.transition = 'none';
+            slides.style.transform = 'translateX(0)';
+        }
+    });
+}
