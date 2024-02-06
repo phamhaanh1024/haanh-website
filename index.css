@@ -585,12 +585,14 @@ span {
     row-gap: 2.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Adjust the column width based on the screen size */
     justify-content: start;
     margin-left: 0;
-    /* Remove margin-left for better alignment */
     margin-top: 2rem;
-    /* Adjust margin-top for better spacing */
+}
+
+.projects__container h5 {
+    font-size: 1.5rem;
+    color: var(--main-color);
 }
 
 .projects__link {
@@ -604,7 +606,7 @@ span {
 .projects__card {
     width: 100%;
     margin-bottom: 2rem;
-    padding-left: 3rem;
+    padding-left: 5rem;
     padding-top: 5rem;
 }
 
