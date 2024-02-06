@@ -18,7 +18,7 @@
         </a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         <nav class="navbar">
-            <a class="active" href="index.html">Home</a>
+            <a class="act" href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#testimonials">Testimonial</a>
             <a href="#skills">Skill</a>
@@ -308,47 +308,95 @@
         </div>
     </section>
 
+    <section class="services section" id="services">
+        <h2 class="section__title heading">
+            My <span>Services</span>
+        </h2>
+
+        <div class="services__container container grid">
+            <article class="services__card">
+                <a href="#contact" class="services__link">
+                    <img src="img/Capture1.PNG" alt="" class="services__img">
+                    <i class="fa-solid fa-circle-arrow-right services__icon "></i>
+                </a>
+
+                <h2 class="services__title">Design Thumbnail</h2>
+                <h5 class="services__subtitle">
+                    Music Video</h5>
+            </article>
+
+
+            <article class="services__card">
+                <a href="#contact" class="services__link">
+                    <img src="img/Capture2.PNG" alt="" class="services__img">
+                    <i class="fa-solid fa-circle-arrow-right services__icon "></i>
+                </a>
+
+                <h2 class="services__title"> Web Design</h2>
+                <h5 class="services__subtitle">
+                    Website</h5>
+            </article>
+
+            <article class="services__card">
+                <a href="#contact" class="services__link">
+                    <img src="img/Capture3.PNG" alt="" class="services__img">
+                    <i class="fa-solid fa-circle-arrow-right services__icon "></i>
+                </a>
+
+                <h2 class="services__title">Design Logo</h2>
+                <h5 class="services__subtitle">
+                    The Brand Identity</h5>
+            </article>
+
+        </div>
+    </section>
+
     <section class="projects section" id="projects">
         <h2 class="section__title heading">
             My <span>Projects</span>
         </h2>
 
-        <div class="projects__container container grid">
-            <article class="projects__card">
-                <a href="https://www.youtube.com/watch?v=nJgGKIkesV4" class="projects__link">
-                    <img src="img/Capture3.PNG" alt="" class="projects__img">
-                    <i class="fa-solid fa-circle-arrow-right projects__icon "></i>
-                </a>
+        <div class="projects__slider">
+            <div class="projects__list">
+                <div class="projects__item">
+                    <img src="img/Capture5.PNG" alt="">
+                    <a href="https://www.youtube.com/watch?v=nJgGKIkesV4">
+                        <button class=" btn projects__slide-button">See More</button>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <img src="img/Capture7.PNG" alt="">
+                    <a href="">
+                        <button class="btn projects__slide-button">See More</button>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <img src="img/Capture6.PNG" alt="">
+                    <a href="">
+                        <button class="btn projects__slide-button">See More</button>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <img src="img/Capture4.PNG" alt="">
+                    <a href="">
+                        <button class="btn projects__slide-button">See More</button>
+                    </a>
+                </div>
 
-                <h2 class="projects__title">Design Thumbnail</h2>
-                <h5 class="projects__subtitle">
-                    Music Video</h5>
-            </article>
-
-
-            <article class="projects__card">
-                <a href="https://chillproduction.vn/" class="projects__link">
-                    <img src="img/Capture2.PNG" alt="" class="projects__img">
-                    <i class="fa-solid fa-circle-arrow-right projects__icon "></i>
-                </a>
-
-                <h2 class="projects__title"> Colab Design Website</h2>
-                <h5 class="projects__subtitle">
-                    ChillProduction Website</h5>
-            </article>
-
-            <article class="projects__card">
-                <a href="https://drive.google.com/drive/u/0/folders/1VC0ICTCkz6mn_v1Gj67Q5fEn6hmie9wg" class="projects__link">
-                    <img src="img/Capture1.PNG" alt="" class="projects__img">
-                    <i class="fa-solid fa-circle-arrow-right projects__icon "></i>
-                </a>
-
-                <h2 class="projects__title">Design Logo</h2>
-                <h5 class="projects__subtitle">
-                    The Brand Identity</h5>
-            </article>
-
+            </div>
+            <div class="projects__buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="projects__dots">
+                <li class="anim"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
+
     </section>
 
     <section class="works" id="works">
@@ -504,6 +552,10 @@
             Môn | Thiết Kế Web Lớp N3
         </p>
     </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll">
+        <i class="fa-solid fa-arrow-up"></i> </a>
 
     <script src="./main.js"></script>
 </body>

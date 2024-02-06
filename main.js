@@ -7,7 +7,7 @@ let navLinks = document.querySelectorAll('header nav a');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-xmark');
     navbar.classList.toggle('active');
-    sidebar.classList.toggle('show'); // Toggle the visibility of the sidebar
+    sidebar.classList.toggle('show');
 };
 
 window.onscroll = () => {
@@ -54,9 +54,8 @@ const navLink = document.querySelectorAll('.sidebar__link')
 
 const linkAction = () => {
     const navMenu = document.getElementById('sidebar')
-        // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show');
-    menuIcon.classList.remove('fa-xmark'); // Remove the 'fa-xmark' class
+    menuIcon.classList.remove('fa-xmark');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
@@ -81,36 +80,114 @@ skillsHeader.forEach((el) => {
 })
 
 
-// PROJECT SLIDER
-// Lấy các phần tử cần thiết
-const slider = document.getElementById('slider');
-const slides = document.getElementById('slides');
+// SHOW SCROLL UP
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') :
+        scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
 
-// Lấy chiều rộng của mỗi slide
-const slideWidth = document.querySelector('.slide').offsetWidth;
+// SCROLL SECTIONS ACTIVE LINK
+const section = document.querySelectorAll('section[id]')
 
-// Thiết lập sự kiện khi trang web được tải
-window.onload = function() {
-    // Gọi hàm autoSlide() để tự động chuyển slide sau một khoảng thời gian
-    setInterval(autoSlide, 3000);
+const scrollActive = () => {
+    const scrollDown = window.scrollY
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add('active-link')
+        } else {
+            sectionsClass.classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+
+// CUON CHUOT
+
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollLinks = document.querySelectorAll('.navbar a');
+    for (const scrollLink of scrollLinks) {
+        scrollLink.addEventListener('click', smoothScroll);
+    }
+
+    function smoothScroll(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop - document.querySelector('.header').offsetHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    const scrollUpButton = document.getElementById('scroll');
+
+    scrollUpButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// SLIDER
+let slider = document.querySelector('.projects__slider .projects__list');
+let items = document.querySelectorAll('.projects__slider .projects__list .projects__item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.projects__slider .projects__dots li');
+
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function() {
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function() {
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(() => { next.click() }, 3000);
+
+function reloadSlider() {
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.projects__slider .projects__dots li.anim');
+    last_active_dot.classList.remove('anim');
+    dots[active].classList.add('anim');
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => { next.click() }, 4000);
+
+
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', () => {
+        active = key;
+        reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
 };
 
-// Hàm chuyển slide tự động
-function autoSlide() {
-    // Lấy giá trị hiện tại của thuộc tính transform
-    const transformValue = window.getComputedStyle(slides).getPropertyValue('transform');
-    // Tính toán chỉ số của slide hiện tại
-    const currentIndex = Math.abs(parseInt(transformValue.split(',')[4]) / slideWidth);
+let links = document.querySelectorAll('.projects__item .projects__slide-link');
 
-    // Chuyển đến slide kế tiếp (hoặc slide đầu tiên nếu đang ở slide cuối cùng)
-    slides.style.transition = 'transform 0.5s ease-in-out';
-    slides.style.transform = 'translateX(' + (-(currentIndex + 1) * slideWidth) + 'px)';
-
-    // Khi chuyển đến slide cuối cùng, thiết lập lại để chuyển đến slide đầu tiên mà không có hiệu ứng
-    slides.addEventListener('transitionend', function() {
-        if (currentIndex === slides.children.length - 1) {
-            slides.style.transition = 'none';
-            slides.style.transform = 'translateX(0)';
-        }
+links.forEach((link, index) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        active = index;
+        reloadSlider();
     });
-}
+});
