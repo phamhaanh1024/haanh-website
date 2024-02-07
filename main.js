@@ -191,3 +191,28 @@ links.forEach((link, index) => {
         reloadSlider();
     });
 });
+
+// DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function() {
+    var doituongmenutrai = document.querySelector(".left");
+    var doituongmenuphai = document.querySelector(".navbar");
+    var trangthai = "duoi110";
+
+    window.addEventListener("scroll", function() {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 110) {
+            if (trangthai === "duoi110") {
+                console.log("ok ");
+                trangthai = "tren110";
+                doituongmenutrai.classList.add("nholaitrai");
+                doituongmenuphai.classList.add("nholaiphai");
+            }
+        } else if (window.pageYOffset <= 110) {
+            if (trangthai === "tren110") {
+                doituongmenutrai.classList.remove("nholaitrai");
+                doituongmenuphai.classList.remove("nholaiphai");
+                trangthai = "duoi110";
+            }
+        }
+    });
+});
