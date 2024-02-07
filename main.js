@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // SLIDER
 let slider = document.querySelector('.projects__slider .projects__list');
 let items = document.querySelectorAll('.projects__slider .projects__list .projects__item');
@@ -216,3 +217,49 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+// PRELOAD IMAGE
+
+function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+        const image = new Image();
+        image.onload = resolve;
+        image.onerror = reject;
+        image.src = url;
+    });
+}
+
+const imagePaths = [
+    './img/img-abt.jpg',
+    './img/Bg1.jpg',
+    './img/Dung.jpg',
+    './img/Nga.jpg',
+    './img/Thuong.jpg',
+    './img/Capture1.PNG',
+    './img/Capture2.PNG',
+    './img/Capture3.PNG',
+    './img/Capture4.PNG',
+    './img/Capture5.PNG',
+    './img/Capture6.PNG',
+    './img/Capture7.PNG',
+    './img/buoi1.jpg',
+    './img/Buoi2.jpg',
+    './img/buoi3.jpg',
+    './img/Buoi4.jpg',
+    './img/buoi5.jpg',
+    './img/buoi6.jpg',
+    './img/buoi7.jpg',
+    './img/buoi8.jpg',
+
+
+
+];
+
+Promise.all(imagePaths.map(preloadImage))
+    .then(() => {
+        console.log('Tất cả các hình ảnh đã được preload.');
+    })
+    .catch((error) => {
+        console.error('Có lỗi xảy ra khi preload hình ảnh:', error);
+    });

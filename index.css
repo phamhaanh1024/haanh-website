@@ -5,7 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    font-family: "Noto Serif";
+    font-family: "Source Serif 4";
 }
 
 :root {
@@ -94,7 +94,7 @@ span {
     padding: 6rem 3rem 0;
     transition: right .4s;
     z-index: 101;
-    text-align: center;
+    text-align: start;
 }
 
 .sidebar__list {
@@ -584,9 +584,8 @@ span {
 .services__container {
     row-gap: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: start;
-    margin-left: 0;
     margin-top: 2rem;
     margin-right: 7.5rem;
 }
@@ -607,7 +606,7 @@ span {
 .services__card {
     width: 100%;
     margin-bottom: 2rem;
-    padding-left: 7.5rem;
+    padding-left: 5rem;
     padding-top: 5rem;
 }
 
@@ -1039,6 +1038,16 @@ section {
 
 
 /* Mobile device */
+
+@media only screen and (max-width: 1679px) {
+    .services__container {
+        row-gap: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        justify-content: start;
+    }
+}
 
 @media(max-width:1200px) {
     html {
