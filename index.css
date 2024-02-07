@@ -585,9 +585,9 @@ span {
 }
 
 .services__container {
-    row-gap: 2.5rem;
+    row-gap: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: start;
     margin-left: 0;
     margin-top: 2rem;
@@ -623,8 +623,9 @@ span {
 }
 
 .services__icon {
-    top: 1rem;
-    right: 1rem;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
     font-size: 1.7rem;
     transition: transform .4s;
     color: #ff0080;
