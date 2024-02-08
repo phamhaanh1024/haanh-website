@@ -263,3 +263,31 @@ Promise.all(imagePaths.map(preloadImage))
     .catch((error) => {
         console.error('Có lỗi xảy ra khi preload hình ảnh:', error);
     });
+
+// CONTACT
+
+document.addEventListener("DOMContentLoaded", function() {
+    var contactForm = document.querySelector(".action");
+
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        displayConfirmation();
+
+    });
+
+    function displayConfirmation() {
+        var confirmationMessage = document.createElement("div");
+        confirmationMessage.classList.add("confirmation-message");
+        confirmationMessage.textContent = "Message Sent";
+
+        contactForm.parentNode.insertBefore(
+            confirmationMessage,
+            contactForm.nextSibling
+        );
+
+        contactForm.style.display = "none";
+    }
+
+
+});
