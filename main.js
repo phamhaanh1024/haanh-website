@@ -266,28 +266,30 @@ Promise.all(imagePaths.map(preloadImage))
 
 // CONTACT
 
-document.addEventListener("DOMContentLoaded", function() {
-    var contactForm = document.querySelector(".action");
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    contactForm.addEventListener("submit", function(event) {
+    alert('Send message done!');
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+    if (!checkRequiredFields()) {
+        alert('Please fill in the missing information');
         event.preventDefault();
+    }
+});
 
-        displayConfirmation();
+function checkRequiredFields() {
 
+    const requiredFields = document.querySelectorAll('#contactForm [required]');
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+        if (field.value.trim() === '') {
+            isValid = false;
+        }
     });
 
-    function displayConfirmation() {
-        var confirmationMessage = document.createElement("div");
-        confirmationMessage.classList.add("confirmation-message");
-        confirmationMessage.textContent = "Message Sent";
-
-        contactForm.parentNode.insertBefore(
-            confirmationMessage,
-            contactForm.nextSibling
-        );
-
-        contactForm.style.display = "none";
-    }
-
-
-});
+    return isValid;
+}
