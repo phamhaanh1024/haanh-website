@@ -639,13 +639,19 @@
         }
         
         .projects__slider {
-            width: 1000px;
+            width: 70vw;
             max-width: 100vw;
             height: 600px;
-            margin-left: 17rem;
             position: relative;
             border-radius: 10px;
             overflow: hidden;
+            left: 50%;
+            /* Move to the center horizontally */
+            top: 0;
+            display: flex;
+            transition: 1s;
+            transform: translateX(-50%);
+            /* Adjust for half of the element's width */
         }
         
         .projects__list {
@@ -659,7 +665,7 @@
         }
         
         .projects__list img {
-            width: 1000px;
+            width: 70vw;
             max-width: 100vw;
             height: 100%;
             object-fit: contain;
@@ -1139,7 +1145,6 @@
                 font-weight: bold;
             }
             .projects__slider {
-                margin-left: 4rem;
                 margin-top: 0;
             }
             .left {
